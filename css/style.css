@@ -5,6 +5,7 @@
 }
 
 body {
+  min-width: 500px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -15,6 +16,14 @@ body {
 
 .padding_left {
   padding-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+a:hover {
+  color: rgba(255, 255, 255, 1);
 }
 /* FIXED */
 
@@ -76,7 +85,6 @@ footer {
 .main {
   display: flex;
   height: calc(100% - 90px);
-  /* overflow: hidden; */
 }
 
 /* main_nav */
@@ -138,6 +146,7 @@ footer {
   width: calc(100% - 50px);
   height: 60px;
   padding: 5px;
+  z-index:2;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -156,7 +165,6 @@ footer {
 }
 
 .call_to_action a {
-  text-decoration: none;
   font-weight: 600;
   font-size: 10px;
   color: white;
@@ -181,13 +189,9 @@ footer {
   margin: 0 10px;
   font-size: 12px;
   font-weight: 600;
-  text-decoration: none;
   text-transform: uppercase;
-  color: #b1b5b8;
 }
-.menu ul li a:hover {
-  color: white;
-}
+
 .active:after {
   content: "";
   display: block;
@@ -213,7 +217,6 @@ h1 {
 
 .song {
   display: flex;
-  position: relative;
   flex-direction: column;
   align-items: center;
   width: calc((100% / 2) - 40px);
@@ -250,7 +253,6 @@ h1 {
   font-size: 14px;
   font-weight: 600;
   text-align: center;
-  text-decoration: none;
   color: white;
 }
 .song a:hover {
@@ -279,22 +281,21 @@ h1 {
 .footer_left {
   display: flex;
   align-items: center;
+  width: 25%;
   margin: 10px;
 }
 
 .footer_left img {
-  width: 60px;
-  height: 60px;
-  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
 }
 
 .footer_left_text a {
   display: block;
-  margin-right: 20px;
-  font-size: 12px;
-  text-decoration: none;
-  line-height: 1.8;
-  color: #7f8386;
+  margin-right: 10px;
+  font-size: 9px;
+  line-height: 1.4;
 }
 .footer_left_text a:hover {
   text-decoration: underline;
@@ -318,7 +319,7 @@ a.text_weight {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-grow: 2;
+  width: 50%;
   height: 90px;
 }
 
@@ -345,20 +346,27 @@ i.footer_center_play:hover {
 }
 
 .footer_center_bottom {
-  height:20px;
-  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
 }
 
+.footer_center_bottom .time {
+  width: 15%;
+  text-align: center;
+  font-size: 9px;
+  color: white;
+}
 .footer_line {
   display:flex;
-  position: relative;
   align-items: center;
   height: 4px;
   border-radius: 18px;
   background-color: #7f8386;
 }
 .footer_center_line {
-  width: 50%;
+  width: 70%;
 }
 .footer_line_white {
   height: 4px;
@@ -369,7 +377,7 @@ i.footer_center_play:hover {
   width: 25%;
 }
 .footer_center_line:hover .footer_center_line_white,
- .footer_right_line:hover .footer_right_line_white {
+.footer_right_line:hover .footer_right_line_white {
   background-color: lime;
 }
 
@@ -384,30 +392,16 @@ i.footer_right_circle  {
   display: block;
 }
 
-.footer_center_line:before {
-  content: "1:25";
-  position: absolute;
-  left: -40px;
-  font-size: 12px;
-  color: white;
-}
-.footer_center_line:after {
-  content: "4:35";
-  position: absolute;
-  right: -40px;
-  font-size: 12px;
-  color: white;
-}
-
 /* footer right */
 .footer_right {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px 20px 10px;
+  width: 25%;
+  margin: 10px;
 }
 
-.footer_right i {
+.footer_right > i {
   margin-right: 10px;
   font-size: 15px;
   color: #7f8386;
@@ -416,7 +410,7 @@ i.footer_right_circle  {
   color: white;
 }
 .footer_right_line {
-  width: 40px;
+  width: 50%;
 }
 .footer_right_line_white {
   width: 40%;
@@ -445,6 +439,7 @@ i.footer_right_circle  {
   }
   .main_nav_header img.logo {
     width: 130px;
+    padding: 10px;
   }
   .main_nav_list {
     padding: 15px 0;
@@ -455,19 +450,22 @@ i.footer_right_circle  {
   .main_nav_list li {
    margin: 3px 0;
    padding: 5px 0;
+   border-left: 2px solid black;
   }
   .main_nav_list ul li:first-child {
     border-left: 2px solid lime;
   }
-  .main_nav_list ul li a {
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
-    color: #b1b5b8;
-  }
-  .main_nav_list ul li:hover a{
+  .main_nav_list ul li:first-child a{
     color: white;
   }
+  .main_nav_list ul li:first-child img {
+    filter: brightness(1);
+  }
+  .main_nav_list ul li a {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
   .main_nav_list img {
     width: 24px;
     margin: 0 20px;
@@ -494,9 +492,7 @@ i.footer_right_circle  {
     vertical-align: middle;
   }
   .aggiungi a {
-    text-decoration: none;
     font-size: 12px;
-    color: #b1b5b8;
   }
   .aggiungi:hover a,
   .aggiungi:hover i {
@@ -515,11 +511,6 @@ i.footer_right_circle  {
   .playlist a {
     font-size: 12px;
     font-weight: 600;
-    text-decoration: none;
-    color: #b1b5b8;
-  }
-  .playlist a:hover {
-    color:white;
   }
   .main_nav_footer_top {
     display: flex;
@@ -527,6 +518,7 @@ i.footer_right_circle  {
     padding-bottom: 10px;
     align-items: center;
     color: #b1b5b8;
+    border-bottom: 1px solid #b1b5b8;
   }
   .main_nav_footer_top i {
     margin-right: 10px;
@@ -536,20 +528,14 @@ i.footer_right_circle  {
   .main_nav_footer_top a {
     font-size: 12px;
     font-weight: 600;
-    text-decoration: none;
-    color: #b1b5b8;
   }
   .main_nav_footer_top:hover a,
   .main_nav_footer_top:hover i {
     color: white;
   }
-  .main_nav_footer_top {
-    border-bottom: 1px solid #b1b5b8;
-  }
   .main_nav_footer_bottom {
     display: flex;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin: 0 20px 20px 20px;
     align-items: center;
     cursor: pointer;
   }
@@ -574,8 +560,18 @@ i.footer_right_circle  {
   .call_to_action {
     width: calc(100% - 180px);
   }
-  .footer_right_line {
-    width: 110px;
+  .footer_left_text a {
+    font-size: 10px;
+    line-height: 1.6;
+    margin-right: 20px;
+  }
+  .footer_left img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  .footer_center_bottom .time {
+    font-size: 12px;
   }
 }
 
@@ -584,8 +580,13 @@ i.footer_right_circle  {
   .song {
     width: calc((100% / 4) - 40px);
   }
-  .footer_right_line {
-    width: 200px;
+  .footer_left_text a {
+    margin-right: 20px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .footer_left img {
+    margin-right: 20px;
   }
 }
 
