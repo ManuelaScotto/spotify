@@ -201,13 +201,16 @@ footer {
   margin: 2px auto;
 }
 
-/* recently_played */
+/* recently_played  e John Doe*/
 h1 {
   font-size: 30px;
   color: white;
   padding: 20px 20px 10px 20px;
 }
 
+#creato {
+  text-transform: capitalize;
+}
 .recently_played,
 .john_doe,
 .popular {
@@ -549,6 +552,7 @@ i.footer_right_circle  {
     margin-left: 10px;
     font-size: 12px;
     font-weight: 600;
+    text-transform: capitalize;
     color: white;
   }
   .main_nav_footer_bottom p:hover {

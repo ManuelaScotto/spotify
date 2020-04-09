@@ -1,8 +1,11 @@
-alert('HELLO SPOTIFY WORLD!');
-document.getElementById('creato').innerHTML='Creato per Manuela Scotto';
-document.getElementById('name').innerHTML='Manuela Scotto';
+// PROMPT
+var userText = prompt('qual è il tuo nome');
+console.log(userText);
 
-console.log('pippo');
+document.getElementById('name').innerHTML= userText;
+
+document.getElementById('creato').innerHTML='Creato per ' + userText;
+
 
 // VARIABILE METODO 1
 var number = 5;
@@ -32,7 +35,3 @@ console.log(sottr);
 
 var molt = somma * sottr;
 console.log(molt);
-
-// PROMPT
-var userText = prompt('qual è il tuo nome');
-console.log(userText);
